@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+.search-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: calc(min(100%, 750px));
+  min-height: 36px;
+  max-height: 280px;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 3px;
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.04), 0px -6px 24px rgba(0,0,0,0.04);
+  box-sizing: border-box;
+}
+
+.search-field {
+  flex-grow: 1;
+  min-width: 200px;
+  max-height: 200px;
+  overflow: auto;
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.search-field::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Handle */
+.search-field::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.2);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.search-field::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,.4);
+}
+
+/* Hide scrollbar for IE and Edge */
+.search-field {
+  -ms-overflow-style: none;
+}
+
+/* For Firefox */
+.search-field {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,.2) transparent;
+}
+
+.search-field:focus {
+  outline: none;
+}
+
+
+.search-results {
+  width: calc(min(100%, 750px));
+  margin: 20px auto;
+}
+
+.search-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 3px;
+  box-shadow: 0px 12px 24px rgba(0,0,0,0.04), 0px -6px 24px rgba(0,0,0,0.04);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.send-button {
+  background-color: white;
+  color: rgb(6, 62, 25);
+  border: none;
+  border-radius: 3px;
+  padding: 4px 1px 0px 1px;
+  margin-left: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.send-button:hover {
+  background-color: #81a4d3;
+  opacity: 0.8;
+}

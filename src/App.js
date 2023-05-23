@@ -1,15 +1,19 @@
 import React from 'react';
-import Search from './components/Search';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Index from './components/Index';
+import { SearchProvider } from './components/search/SearchContext';
+import Search from './components/search/Search';
+import Searches from './components/search/Searches';
+import './index.css'
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Search />} />
-      </Routes>
-    </Router>
+    <div className="app">
+      <SearchProvider>
+        <div className="App">
+          <Search />
+          <Searches />
+        </div>
+      </SearchProvider>
+    </div>
   );
 }
 
