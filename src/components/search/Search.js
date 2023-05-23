@@ -7,20 +7,15 @@ import './Search.css';
 const Search = () => {
   const { searches, setSearches } = useContext(SearchContext);
   const [input, setInput] = useState('');
-  const [rows, setRows] = useState(1);
 
-  const handleInput = (e) => {
-    setInput(e.target.value);
-    setRows(e.target.scrollHeight / 20); // Assumes a line height of ~20px
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     let sanitizedInput = input.trim();
-    if (!/[\w]/.test(sanitizedInput)) {  // checks if there's no alphanumeric character
+    if (!/[\w]/.test(sanitizedInput)) {
       return;
     }
-    sanitizedInput = sanitizedInput.replace(/\n{3,}/g, '\n\n');  // replace more than two line breaks with two
+    sanitizedInput = sanitizedInput.replace(/\n{3,}/g, '\n\n'); 
     setSearches([...searches, sanitizedInput]);
     setInput('');
   };
@@ -35,15 +30,6 @@ const Search = () => {
 
   return (
     <form onSubmit={handleSubmit} className="search-container">
-      {/* <textarea 
-        rows={rows} 
-        className="search-field" 
-        value={input} 
-        onChange={handleInput} 
-        onKeyDown={handleKeyDown} 
-        placeholder="Search" 
-      /> */}
-
       <TextareaAutosize 
         className="search-field" 
         value={input} 

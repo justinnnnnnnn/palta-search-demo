@@ -8,7 +8,10 @@ const Searches = () => {
   return (
     <div className="search-results">
       {searches.map((search, index) => {
-        return <div key={index} style={{whiteSpace: "pre-line"}} className="search-item">{search}</div>
+        return (
+        <div key={index} className="search-item">
+          {search}
+        </div>)
       })}
 
     </div>
